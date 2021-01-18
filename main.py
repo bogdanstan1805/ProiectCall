@@ -5,4 +5,6 @@ location = ("C:\Users\sTn\Desktop")
 wb = xlrd.open_workbook(location)
 sheet = wb.sheet_by_index(0)
 
+print(1)
+
 
