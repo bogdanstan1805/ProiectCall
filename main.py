@@ -1,10 +1,16 @@
-import xlrd
+import pandas as pd
 
-location = ("C:\Users\sTn\Desktop")
+location = ("C:/Users/sTn/Desktop/test123.xlsx")
 
-wb = xlrd.open_workbook(location)
-sheet = wb.sheet_by_index(0)
+excel_object = pd.ExcelFile(location)
+all_sheets = excel_object.sheet_names
+print(all_sheets)
 
-print(1)
+sheet = pd.read_excel(excel_object, "Sheet1")
+
+
+
+a = sheet.iloc[[0], [0]]
+print(a)
 
 
